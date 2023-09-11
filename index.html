@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comemoração de 3 meses de namoro</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <!-- AVATAR -->
+        <img class='avatar' id="" src="Fotos-e-video/avatark3-2.jpg" alt="Foto de Perfil">
+        <div class="menu-overlay" id="menu-overlay">
+            <ul class="menu-options">
+                <li><button class="Botoes" id="botaoperfil">Perfil</button></li>
+                <li><button class="Botoes" id="botaoAndamento">Em andamento</button></li>
+                <li><button class="Botoes" id="deslogar">Deslogar</button></li>
+            </ul>
+        </div>
+        <div id="fade-overlay" class="hide-overlay"></div>
+        
+        <div id="modal-overlay" class="hide-overlay">
+            <div >
+                <button  id="closeModal-overlay"type="close">Fechar</button>
+            </div>
+            <div class="modal-body-overlay">
+                <h1 id="h1Pefil">Perfil da Cheirosa</h1>
+                <p id="Textoperfil">Você esta vendo o perfil do meu amor,a Klaudia tem 18 anos seus enormes 1,55 Metros de altura, um amor de pessoa, as vezes bem as vezes é braba que meuuuu deus. Mas é um amor, sem falar que é linda, maravilhosa e cherosa. </p>
+            </div>
+        </div>
+
+         <!-- Em andamento -->
+
+        <div id="modal-andamento" class="modal-andamento">
+            <div class="modal-content-andamento">
+                <button id="close-modal-andamento" class="close-modal-andamento">×</button>
+                <h1 class="modal-header-andamento">Em Andamento</h1>
+                <p class="modal-text-andamento">Não estava escrito que estava em andamento?????? OXE não entendi o por que clicou......</p><br>
+                <p class="modal-text-andamento">Aguarde Atualizações</p>
+            </div>
+        </div>
+        <div id="fade-andamento" class="hide-andamento"></div>
+        <!-- MENU e TÍTULO -->
+        <h1 class="titulocomemoração">Comemoração de 3 meses de namoro</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="botoes-menu">Inicio</a></li>
+                <li><a href="fotos_e_videos.html" class="botoes-menu">Galeria do Casal</a></li>
+                <li><button id="reclame" class="botoes-menu">Reclame aqui</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Envelope de carta -->
+    <section>
+        <div class="envelope-wrapper">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <div class="words line1"></div>
+                    <div class="words line2"></div>
+                    <div class="words line3"></div>
+                    <div class="words line4"></div>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="reset">
+                <button id="open" id="openModal">Abrir</button>
+                <button id="reset">Resetar</button>    
+            </div>
+        </div>
+        <div id="fade" class="hide"></div>
+
+        <div id="modal" class="hide">
+            <div >
+                <button id="close-modal" id="closeModal"type="close">Fechar</button>
+            </div>
+            <div class="modal-body">
+                <p id="textinho">Parabéns, Klaudia, pelo nosso trimestre de amor! Já tivemos muitas memórias especiais e momentos inesquecíveis durante esses três meses de companhia. Quando estou com você, é incrível como o tempo passa rapidamente. Cada dia ao seu lado é uma homenagem ao amor que compartilhamos e à conexão única que temos. Embora eu fique ansioso para saber o que nos espera no futuro, uma coisa que sei com certeza é que, enquanto estivermos unidos, cada dia será uma experiência incrível. Obrigado, Klaudia, por ser a minha companheira fantástica por mais três meses. Quero que tenha mais muitos meses e anos de felicidade com vc. Te amo cada vez mais a cada dia! 💖💑🎊</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contagem regressiva aqui -->
+    <section class="contagem">
+        <h2>Contagem regressiva</h2>
+        <div class="countdown">
+            <p>Faltam <span id="countdown-text"></span> para o nosso dia!</p>
+        </div>
+    </section>
+    <!-- Dias nos vendo aqui -->
+    <section class="diascorridos">
+        <div>
+            <p>Estamos completando <span id="resultado"></span> dias juntos sem faltar um único dia!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p class="copy">&copy; 2023 - Comemoração de 3 meses de namoro</p>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>

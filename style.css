@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+
+
+
+
+
+/* Estilos globais */
+html {
+    background-color: #1c1c1c;
+    font-size: 20px;
+    caret-color: #1c1c1c;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #1c1c1c;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, .33);
+    padding: 50px;
+    position: relative;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+/* Estilos da navegação */
+.menu,
+ul {
+    list-style: none;
+}
+
+.menu,
+li {
+    padding: 8px;
+    display: inline;
+}
+
+.botoes-menu {
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    background-color: #181818;
+    border-style: none;
+    text-decoration: none;
+    color: inherit;
+    outline-style: none;
+}
+
+.menu {
+    font-size: 16px;
+    position: absolute;
+    bottom: -7px;
+    text-align: center;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilos do avatar */
+.avatar {
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 4px;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 2px solid #6211ad;
+    padding: 1px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* Estilos do modal-overlay */
+
+
+
+#fade-overlay,#modal-overlay{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+#fade-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+
+}
+#modal-overlay{
+    position: fixed;
+    left: 140px;
+    top: 20px;
+    z-index: 10;
+    background-color: #181818;
+    transform: translate(0%,0%,0%,0%);
+    width: 500px;
+    height: 400px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 80px;
+
+}
+#modal-overlay.hide-overlay, #fade-overlay.hide-overlay{
+    opacity: 0;
+    pointer-events: none;
+}
+#closeModal-overlay{
+    position: absolute;
+    align-items: left;
+    left: 400px;
+    padding: .6rem 1.2rem;
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16pxs;
+
+
+}
+
+#h1Perfil{
+    font-size: 50px;
+
+
+}
+#Textoperfil{
+    font-size: 35px;
+    padding-top: 30px;
+
+}
+
+/* Estilos para o modal "Em Andamento" */
+.modal-andamento {
+    position: fixed;
+    left: 140px;
+    top: 20px;
+    z-index: 10;
+    background-color: #181818;
+    transform: translate(0%,0%,0%,0%);
+    width: 500px;
+    height: 400px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 80px;
+    display: none;
+
+}
+
+.modal-header-andamento {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.modal-text-andamento {
+    font-size: 35px;
+}
+
+.close-modal-andamento {
+    position: relative;
+    background-color: #4b4a4a;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilos para o fundo escuro do modal "Em Andamento" */
+#fade-andamento {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+}
+
+
+
+/* Estilos do menu */
+.menu-overlay {
+    position: fixed;
+    top: 5px;
+    left: 120px;
+    width: 150px;
+    height: 170px;
+    display: none;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    z-index: 999;
+}
+
+.menu-options {
+    left: 10px;
+    top: 10px;
+    transform: translate(0%,15%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-options li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Botoes {
+    font-family: cursive;
+    background-color: #00000000;
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+    border-radius: 80px;
+}
+
+.menu-options a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Estilos das seções */
+section {
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+.contagem {
+    text-align: center;
+}
+
+.diascorridos {
+    color: white;
+    text-align: center;
+    background-color: #1c1c1c;
+    padding: 80px;
+    margin: 0px;
+}
+
+/* Estilos da Carta */
+
+
+
+#close-modal{
+    right: 20px;
+    padding: .6rem 1.2rem;
+    background-color: #888;
+    color: white;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 16pxs;
+
+
+}
+
+#fade,#modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+#fade{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+
+}
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    background-color: #1c1c1c;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    height: 40 0px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 80px;
+}
+#modal.hide,#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+#modal.hide{
+    top: 0;
+
+}
+
+#textinho{ 
+    font-family: cursive;
+    color: #ffffff;
+    font-size: 27px;
+}
+
+#envelope {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    background-color: #00334c;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 3;
+}
+.flap {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 82px solid transparent;
+    border-top: 98px solid #00334c;
+    transform-origin: top;
+}
+.pocket {
+    border-left: 140px solid #0077b2;
+    border-right: 140px solid #0077b2;
+    border-bottom: 90px solid #006da3;
+    border-top: 90px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.letter {
+    position: relative;
+    background-color: #fff;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
+    top: 5%;
+    border-radius: 6px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+}
+.letter:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25%, rgba(215, 227, 239, 0.70) 55%, rgba(215, 227, 239, 1.00) 100%);
+}
+.words {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 14%;
+    background-color: #eeeff0;
+}
+.words.line1 {
+    top: 15%;
+    width: 20%;
+    height: 7%;
+}
+.words.line2 {
+    top: 30%;
+}
+.words.line3 {
+    top: 50%;
+}
+.words.line4 {
+    top: 70%;
+}
+.open .flap {
+    transform: rotatex(180deg);
+    transition: transform 0.4s ease, z-index 0.6s;
+    z-index: 1;
+}
+.close .flap {
+    transform: rotatex(0deg);
+    transition: transform 0.4s 0.6s ease, z-index 1s;
+    z-index: 5;
+}
+.close .letter {
+    transform: translatey(0px);
+    transition: transform 0.4s ease, z-index 1s;
+    z-index: 1;
+}
+.open .letter {
+    transform: translatey(-60px);
+    transition: transform 0.4s 0.6s ease, z-index 0.6s;
+    z-index: 2;
+}
+.hearts {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.heart {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.heart:before, .heart:after {
+    position: absolute;
+    content: '';
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #d00000;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+.close .heart {
+    opacity: 0;
+    -webkit-animation: none;
+            animation: none;
+}
+.a1 {
+    left: 20%;
+    transform: scale(0.6);
+    opacity: 1;
+    -webkit-animation: slideUp 4s linear 1, sideSway 2s  ease-in-out 4 alternate;
+            animation: slideUp 4s linear 1, sideSway 2s  ease-in-out 4 alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+}
+.a2 {
+    left: 55%;
+    transform: scale(1);
+    opacity: 1;
+    -webkit-animation: slideUp 5s linear 1, sideSway 4s  ease-in-out 2 alternate;
+            animation: slideUp 5s linear 1, sideSway 4s  ease-in-out 2 alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+}
+.a3 {
+    left: 10%;
+    transform: scale(0.8);
+    opacity: 1;
+    -webkit-animation: slideUp 7s linear 1, sideSway 2s  ease-in-out 6 alternate;
+            animation: slideUp 7s linear 1, sideSway 2s  ease-in-out 6 alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+}
+@-webkit-keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -600px;
+    }
+}
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -600px;
+    }
+}
+@-webkit-keyframes sideSway {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+}
+@keyframes sideSway {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+}
+/*----------------------------------------*/
+.envelope-wrapper {
+    height: 380px;
+}
+.reset {
+    text-align: center;
+}
+.reset button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    background-color: transparent;
+    border: solid 2px #0077b2;
+    border-radius: 4px;
+    color: #0077b2;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    line-height: 1em;
+    text-decoration:  none;
+    min-width: 120px;
+    outline: none;
+}
+.reset button:hover {
+    background-color: #0077b2;
+    color: #fff;
+}
+/* Estilos da galeria de fotos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+    background-color: #1c1c1c;
+}
+
+.photo {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 5px;
+    width: 20%;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    opacity: 0.7;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 30px;
+    cursor: pointer
+}
